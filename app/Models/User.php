@@ -19,6 +19,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
     ];
@@ -48,4 +49,5 @@ class User extends Authenticatable
         return $this->belongsToMany(Category::class, 'users_categories','users_id', 'categories_id');
     }
   
+   
 }

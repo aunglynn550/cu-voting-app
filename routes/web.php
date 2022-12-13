@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-
+Route::get('/home', function () {
+    return view('home');
+});
 
 Route::group( [ 'middleware' =>'auth'], function()
 {
@@ -27,13 +29,15 @@ Route::group( [ 'middleware' =>'auth'], function()
 
         Route::resource('/king', 'App\Http\Controllers\Admin\KingController')->middleware('is_admin');
      
-         Route::get('/user', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.users');       
+        //  Route::get('/user', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.users');       
     });
 
 
     Route::get('/welcome', function () {
         return view('welcome');
     });
+   
+  
   
     Route::prefix('king')->group(function () {
 
@@ -53,12 +57,6 @@ Route::prefix('queen')->group(function () {
         ->name('queenvoted.index');
 
 });
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
-//Route::get('/voted', [App\Http\Controllers\VotedController::class, 'index']);
-// Route::get('/king', [App\Http\Controllers\King\KingController::class, 'index']) ->name('king.index')->middleware('voted');
-// Route::get('/queen', [App\Http\Controllers\Queen\QueenController::class, 'index']) ->name('queen.index')->middleware('voted');
-// Route::post('/kingvoted', [App\Http\Controllers\King\KingVotedController::class, 'index'])->name('king.voted');
-// Route::get('/queenvoted', [App\Http\Controllers\Queen\QueenVotedController::class, 'index'])->name('queen.voted');
 
 });
 

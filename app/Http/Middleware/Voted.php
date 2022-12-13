@@ -22,15 +22,15 @@ class Voted
         
         foreach($user->categories as $category)
 {
-    if($category->type == 'King')
-    {
-        return redirect('kingvoted');
-
-    }
-    // if($category->type == 'Queen')
+    // if($category->type == 'King')
     // {
-    //     return redirect('queenvoted');
+    //     return redirect('kingvoted');
+
     // }
+    if($category->type == 'Queen')
+    {
+        return redirect('queenvoted');
+    }
 }
        
     

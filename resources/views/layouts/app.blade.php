@@ -16,6 +16,7 @@
 </head>
 <body class="bg-gray-100">
 <a href="{{ route('logout') }}">Logout</a>
+<a href="{{ route('login') }}">Login</a>
 <a href="{{ route('register') }}">Register</a>
     <div class="nav">
         <div class="nav-items">

@@ -20,11 +20,7 @@
             </div>
         </div>
         <div class="col-md-4">
-        @foreach ($user->categories as $category)
-        <h2>{{ $user->name }}</h2>
-        <p>is already voted for {{ $category->type }}</p>
-
-        @endforeach
+    
         </div>
     </div>
 </div>

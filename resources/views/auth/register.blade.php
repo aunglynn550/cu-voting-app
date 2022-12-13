@@ -6,16 +6,28 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
-
+            
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+                        <label for="username" class="col-md-4 col-form-label text-md-end"> UserName</label>
+                        <div class="col-md-3">
+                        
+                                <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="" required autocomplete="username" autofocus>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                @error('username')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                 
+
+                        <label for="name" class="col-md-4 col-form-label text-md-end"> Name</label>
+                        <div class="col-md-3">
+                        
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -24,7 +36,6 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 

@@ -23,6 +23,7 @@
 <body>
 <h1 class="quote text-center m-3">Alone, we can do so little. Together we can do so much!</h1>
 <a href="{{ route('logout') }}">Logout</a>
+<a href="{{ route('login') }}">Login</a>
 <div class="main-container">
     <div class="side-bar">
         <ul class="nav">
