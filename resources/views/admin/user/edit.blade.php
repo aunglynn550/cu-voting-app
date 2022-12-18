@@ -6,8 +6,8 @@
             <div class="col-md-12">
                 <div id="card" class="card">
                     <div class="card-header">
-                       <p> Kings List</p>
-                        <a href="{{ route('king.create') }}" class="button btn-sm" data-type="primary">Create</a>
+                       <p> Users List</p>
+                      
                     </div>
                     
                     <div class="card-body">
@@ -23,30 +23,29 @@
                                 <th></th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Votes</th>
+                            
                                 <th></th>
                             </tr>
-                            @forelse ($users as $user)
+                        
                                 <tr>
-                                    <td>
-                                        <div class="product-img">
-                                        <img src="/img/King/{{ $user->image }}" alt="">
-                                        </div>
-                                        
-                                    </td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->vote }}</td>
-                                    <td><a href="{{route('king.edit',$user->id)}}"
-                                           class="button btn-sm" data-type="primary">Edit</a>
+                                   
+                                    @foreach($user->categories as $category)
+                                    <td>{{ $category->type }}</td>
+                                    @endforeach
+                                    <td>
+                                    <a href="{{ route('users.index') }}" onclick="event.preventDefault();
+                                     document.getElementById('delete-form-{{$user->id}}').submit();">
+                                    Delete
+                                    </a>
                                     </td>
+                                    <form id="delete-form-{{$user->id}}" action="{{ route('users.destroy',$user->id) }}"method="post">
+                                        @csrf @method('DELETE')
+                                    </form>
                                  
                                 </tr>
-                            @empty
-                                <tr>
-                                    <td colspan="4">No users found.</td>
-                                </tr>
-                            @endforelse
+                    
                         </table>
                     </div>
                 </div>

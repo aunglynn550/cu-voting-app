@@ -5,11 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div id="card" class="card">
-                    <div class="card-header">
-                       <p> Kings List</p>
-                        <a href="{{ route('king.create') }}" class="button btn-sm" data-type="primary">Create</a>
+                <div class="card-header">
+                       <p> Qeens List</p>
+                        <a href="{{ route('queen.create') }}" class="button btn-sm" data-type="primary">Create</a>
                     </div>
-                    
+
                     <div class="card-body">
 
                         @if (session('message'))
@@ -26,21 +26,19 @@
                                 <th>Votes</th>
                                 <th></th>
                             </tr>
-                            @forelse ($users as $user)
+                            @forelse ($Queens as $user)
                                 <tr>
                                     <td>
                                         <div class="product-img">
-                                        <img src="/img/King/{{ $user->image }}" alt="">
+                                        <img src="/img/Queen/{{ $user->image }}" alt="">
                                         </div>
                                         
                                     </td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->vote }}</td>
-                                    <td><a href="{{route('king.edit',$user->id)}}"
-                                           class="button btn-sm" data-type="primary">Edit</a>
-                                    </td>
-                                 
+                                    <td><a href="{{ route('queen.edit',$user->id) }}"
+                                           class="button btn-sm" data-type="primary">Edit</a></td>
                                 </tr>
                             @empty
                                 <tr>

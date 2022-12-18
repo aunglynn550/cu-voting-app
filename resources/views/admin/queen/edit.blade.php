@@ -26,27 +26,29 @@
                                 <th>Votes</th>
                                 <th></th>
                             </tr>
-                            @forelse ($users as $user)
+                        
                                 <tr>
                                     <td>
                                         <div class="product-img">
-                                        <img src="/img/King/{{ $user->image }}" alt="">
+                                        <img src="/img/Queen/{{ $queen->image }}" alt="">
                                         </div>
                                         
                                     </td>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td>{{ $user->vote }}</td>
-                                    <td><a href="{{route('king.edit',$user->id)}}"
-                                           class="button btn-sm" data-type="primary">Edit</a>
+                                    <td>{{ $queen->name }}</td>
+                                    <td>{{ $queen->email }}</td>
+                                    <td>{{ $queen->vote }}</td>
+                                    <td>
+                                    <a href="{{ route('queen.index') }}" onclick="event.preventDefault();
+                                     document.getElementById('delete-form-{{$queen->id}}').submit();">
+                                    Delete
+                                    </a>
                                     </td>
+                                    <form id="delete-form-{{$queen->id}}" action="{{ route('queen.destroy',$queen->id) }}"method="post">
+                                        @csrf @method('DELETE')
+                                    </form>
                                  
                                 </tr>
-                            @empty
-                                <tr>
-                                    <td colspan="4">No users found.</td>
-                                </tr>
-                            @endforelse
+                    
                         </table>
                     </div>
                 </div>

@@ -17,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index']);
 
 Route::group( [ 'middleware' =>'auth'], function()
 {
@@ -28,8 +26,12 @@ Route::group( [ 'middleware' =>'auth'], function()
     Route::prefix('admin')->group(function () {
 
         Route::resource('/king', 'App\Http\Controllers\Admin\KingController')->middleware('is_admin');
+        Route::resource('/queen', 'App\Http\Controllers\Admin\QueenController')->middleware('is_admin');
+        Route::resource('/users', 'App\Http\Controllers\Admin\UserController')->middleware('is_admin');
+        
+
      
-        //  Route::get('/user', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.users');       
+        Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->middleware('is_admin');       
     });
 
 
@@ -42,7 +44,7 @@ Route::group( [ 'middleware' =>'auth'], function()
     Route::prefix('king')->group(function () {
 
         Route::get('/', [\App\Http\Controllers\King\KingController::class, 'index'])
-            ->name('king.index')->middleware('voted');
+            ->name('king')->middleware('king_voted');
     
         Route::get('/voted', [\App\Http\Controllers\King\KingVotedController::class, 'index'])
             ->name('kingvoted.index');
@@ -51,7 +53,7 @@ Route::group( [ 'middleware' =>'auth'], function()
 Route::prefix('queen')->group(function () {
 
     Route::get('/', [\App\Http\Controllers\Queen\QueenController::class, 'index'])
-        ->name('queen.index')->middleware('voted');
+        ->name('queen')->middleware('queen_voted');
 
     Route::get('/voted', [\App\Http\Controllers\Queen\QueenVotedController::class, 'index'])
         ->name('queenvoted.index');

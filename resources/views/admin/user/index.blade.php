@@ -5,21 +5,14 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div id="card" class="card">
-                    <div class="card-header">
-                       <p> Kings List</p>
-                        <a href="{{ route('king.create') }}" class="button btn-sm" data-type="primary">Create</a>
-                    </div>
-                    
+                    <div class="card-header">Users List</div>
+
                     <div class="card-body">
 
-                        @if (session('message'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('message') }}
-                            </div>
-                        @endif
+                     
 
                         <table class="table user-approve-table">
-                            <tr>
+                        <tr>
                                 <th></th>
                                 <th>Name</th>
                                 <th>Email</th>
@@ -37,16 +30,15 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->vote }}</td>
-                                    <td><a href="{{route('king.edit',$user->id)}}"
-                                           class="button btn-sm" data-type="primary">Edit</a>
-                                    </td>
-                                 
+                                    <td><a href="{{route('users.show',$user->id)}}"
+                                           class="button btn-sm" data-type="primary">Detail</a></td>
                                 </tr>
                             @empty
                                 <tr>
                                     <td colspan="4">No users found.</td>
                                 </tr>
                             @endforelse
+                          
                         </table>
                     </div>
                 </div>

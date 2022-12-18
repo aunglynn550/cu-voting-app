@@ -32,7 +32,12 @@ class Kings extends Component
       
         $user = User::find(Auth::id());
         $user->categories()->attach($king_id);
+
+        // if you want to remove all authors from a book, use detach without passing any arguments.
+        // $book->authors()->detach();
         $kings = King::all();
         return redirect('king/voted',['kings'=>$kings]) ;
+
+
     }
 }

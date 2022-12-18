@@ -55,6 +55,8 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'voted' => \App\Http\Middleware\Voted::class,
+        'king_voted' => \App\Http\Middleware\king\voted::class,
+        'queen_voted' => \App\Http\Middleware\queen\voted::class,
         'is_admin' => \App\Http\Middleware\IsAdmin::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,

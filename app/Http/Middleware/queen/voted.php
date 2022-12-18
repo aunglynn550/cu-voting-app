@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Http\Middleware\queen;
 
 use Closure;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
-
-class Voted
+class voted
 {
     /**
      * Handle an incoming request.
@@ -21,26 +20,14 @@ class Voted
         $user = User::find(Auth::id());
         
         foreach($user->categories as $category)
-{
-    // if($category->type == 'King')
-    // {
-    //     return redirect('kingvoted');
-
-    // }
-    if($category->type == 'Queen')
-    {
-        return redirect('queen/voted');
-    }
-}
-       
-    
-
-        //  if($user->categories()->type) //Error Code
-        // {
-        //     return redirect('voted');
-        // }
-
+            {
+            
+                if($category->type == 'Queen')
+                {
+                    return redirect('queen/voted');
+                }
+            }
+                
         return $next($request);
-       
     }
 }

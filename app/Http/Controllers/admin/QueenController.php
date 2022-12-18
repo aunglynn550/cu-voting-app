@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\King;
+use App\Models\Queen;
 
-class KingController extends Controller
+class QueenController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,8 @@ class KingController extends Controller
     public function index()
     {
         //
-        $king = King::all();
-        return view('admin/king/index',['users'=>$king]);
-
+        $Queens = Queen::all();
+        return view('admin/queen/index',['Queens'=>$Queens]);
     }
 
     /**
@@ -29,7 +28,7 @@ class KingController extends Controller
     public function create()
     {
         //
-        return view('admin/king/create');
+        return view('admin/queen/create');
     }
 
     /**
@@ -42,8 +41,6 @@ class KingController extends Controller
     {
         //
         
-
-
         $request->validate([
             'image' => 'required|image|mimes:png,jpg,jpeg|max:2048'
         ]);
@@ -51,7 +48,7 @@ class KingController extends Controller
         $imageName = time().'.'.$request->image->extension();
 
         // Public Folder
-        $request->image->move(public_path('img/King'), $imageName);
+        $request->image->move(public_path('img/Queen'), $imageName);
 
         // //Store in Storage Folder
         // $request->image->storeAs('images', $imageName);
@@ -61,35 +58,15 @@ class KingController extends Controller
 
        
 
-        $king = new King();
-        $king->name = $request->name;
-        $king->image= $imageName;
-        $king->vote=0;
-        $king->created_at=now();
-        $king->updated_at=now();
-        $king->save();
-      
-
-        $king = King::all();
-        return view('admin/king/index',['users'=>$king]);
-
-        // $request->validate([
-        //     'name'=>'required',
-        //     'image'=>'required',
-        // ]);
-        // $image = $request->file('image');
-        // $extension = $image->getClientOriginalExtension();
-        // $originalname = $image->getClientOriginalName();
-        // $path = $image->move('uploads/media/', $originalname); // REMOVE STR_REPLACE HERE
-        // $imgsizes = $path->getSize();
-        // $mimetype = $image->getClientMimeType();
-
-        // $picture = new Avatar();
-        // $picture->name = $request->name;
-        // $picture->filename = str_replace('\'', '/', $path);
-        // $picture->save();
-        // $data->name = $request->name;
-        // return redirect('avatars')->with('successfully created or uploaded image');
+        $queen = new Queen();
+        $queen->name = $request->name;
+        $queen->image= $imageName;
+        $queen->vote=0;
+        $queen->created_at=now();
+        $queen->updated_at=now();
+        $queen->save();
+        $queens = Queen::all();
+        return view('admin/queen/index',['queens'=>$queens]);
     }
 
     /**
@@ -112,8 +89,8 @@ class KingController extends Controller
     public function edit($id)
     {
         //
-        $king = King::where('id',$id)->first();
-        return view('admin/king/edit',['king'=>$king]);
+        $queen = Queen::where('id',$id)->first();
+        return view('admin/queen/edit',['queen'=>$queen]);
     }
 
     /**
@@ -125,10 +102,7 @@ class KingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $king = King::where('id',$id)->first();
-        $king->vote= $request->vote;
-        $king->save();
-        return redirect('admin/king');
+        //
     }
 
     /**
@@ -140,13 +114,13 @@ class KingController extends Controller
     public function destroy($id)
     {
         //
-       $king=King::where('id', $id)->first();
+        $queen=Queen::where('id', $id)->first();
 
       
-       $image_path = public_path().'/img/King/'.$king->image;
-       unlink($image_path);
-       $king->delete();
-        
-        return redirect('admin/king');
+        $image_path = public_path().'/img/Queen/'.$queen->image;
+        unlink($image_path);
+        $queen->delete();
+         
+         return redirect('admin/queen');
     }
 }

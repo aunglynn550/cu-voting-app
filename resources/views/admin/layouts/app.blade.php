@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 
 
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/app.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Google Font -->
@@ -21,14 +21,18 @@
 </head>
 
 <body>
-<h1 class="quote text-center m-3">Alone, we can do so little. Together we can do so much!</h1>
+
 <a href="{{ route('logout') }}">Logout</a>
 <a href="{{ route('login') }}">Login</a>
 <div class="main-container">
     <div class="side-bar">
         <ul class="nav">
-        <li class="nav-item nav-category">Dashboard</li>     
-
+        <li class="nav-item nav-category"><h4>Dashboard</h4></li>     
+        <li class="nva-item"><a href="{{ route('users.index') }}">Users</a> </li>
+        <li class="nva-item"><a href="{{ route('king.index') }}">Kings</a> </li>
+        <li class="nva-item"><a href="{{ route('queen.index') }}">Queen</a> </li>
+        <li class="nva-item"><a href="{{ route('users.index') }}">All Kings</a> </li>
+        <li class="nva-item"><a href="{{ route('users.index') }}">All Queens</a> </li>
         </ul>
     </div>
         

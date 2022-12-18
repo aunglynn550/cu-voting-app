@@ -20,8 +20,8 @@
 <a href="{{ route('register') }}">Register</a>
     <div class="nav">
         <div class="nav-items">
-        <a href="{{ route('king.index') }}">King</a>
-        <a href="{{ route('queen.index') }}">Queen</a> 
+        <a href="{{ route('king') }}">King</a>
+        <a href="{{ route('queen') }}">Queen</a> 
         </div>
     </div>
 

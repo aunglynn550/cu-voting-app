@@ -24,11 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = User::find(Auth::id());
-        $user->categories()->attach(2);
-        
-        return view('home',['user'=>$user]);
-       
-        
+        return "home";
     }
 }
