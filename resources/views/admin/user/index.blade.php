@@ -16,7 +16,7 @@
                                 <th></th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Votes</th>
+                               
                                 <th></th>
                             </tr>
                             @forelse ($users as $user)
@@ -29,7 +29,7 @@
                                     </td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->vote }}</td>
+                                 
                                     <td><a href="{{route('users.show',$user->id)}}"
                                            class="button btn-sm" data-type="primary">Detail</a></td>
                                 </tr>

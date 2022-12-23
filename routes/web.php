@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
 Route::group( [ 'middleware' =>'auth'], function()
 {
@@ -58,6 +58,18 @@ Route::prefix('queen')->group(function () {
     Route::get('/voted', [\App\Http\Controllers\Queen\QueenVotedController::class, 'index'])
         ->name('queenvoted.index');
 
+});
+
+Route::prefix('allking')->group(function () {
+
+    Route::get('/', [\App\Http\Controllers\Allking\AllkingController::class, 'voteallking'])
+        ->name('allking');
+
+        Route::get('/show', [\App\Http\Controllers\Allking\AllkingController::class, 'index'])
+        ->name('allking.show');
+
+    Route::post('/voted', [\App\Http\Controllers\Allking\AllkingController::class, 'vote'])
+        ->name('voteallking');
 });
 
 });

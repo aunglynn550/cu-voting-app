@@ -1,6 +1,7 @@
 :root {
     --ff-primary: Heebo, sans-serif;
     --ff-secondary: Bungee, cursive;
+    --ff-neutral:'Tangerine', serif;;
     --ff-accent: Bungee Shade, cursive;
     --spacer: 1rem;
     --clr-neutral-100: 0 0% 100%;
@@ -57,6 +58,11 @@
     font-family: var(--ff-secondary);
   }
 
+
+.ff-tanger{
+    font-family: 'Tangerine', serif;
+}
+
 /* button */
 
 .button{
@@ -81,9 +87,10 @@ html:focus-within
   /* Set core body defaults */
   body
    {
-    min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    margin: 0;
+    height: 100vh;
   }
 
 
@@ -142,6 +149,7 @@ picture
     gap: .5rem;
     grid-template-columns: 
     repeat(auto-fit, minmax(15rem, 1fr));
+    height: 100%;
 }
 
 .product-grid .card__content >*
@@ -245,6 +253,51 @@ picture
 
 
 
+.voting-card{
+    padding: 5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(93,173,243,1) 87%, rgba(0,212,255,1) 100%); 
+  }
+
+  .voting-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    aspect-ratio: 1 /1;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(126,126,230,1) 87%, rgba(0,212,255,1) 100%);
+  }
+  .voting-container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  label{
+    
+    font-family: 'Tangerine', serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  
+
+  .input{
+    width: 10em;
+    height: 2em;
+    
+
+  }
+
+.voting-container form .button{
+    width: 7em;
+    height: 3em;
+    font-size: 1em;
+}
 
 /* Success Mark*/
 

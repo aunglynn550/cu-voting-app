@@ -25,12 +25,12 @@ class CategorySeeder extends Seeder
             'updated_at'=>now(),
         ]);
         Category::create([
-            'type' => 'Popular_King',
+            'type' => 'All_King',
             'created_at'=>now(),
             'updated_at'=>now(),
         ]);
         Category::create([
-            'type' => 'Popular_Queen',
+            'type' => 'All_Queen',
             'created_at'=>now(),
             'updated_at'=>now(),
         ]);

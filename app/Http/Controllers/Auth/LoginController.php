@@ -56,7 +56,7 @@ class LoginController extends Controller
 
         if(auth()->attempt(array($fieldType => $input['username'], 'password' => $input['password'])))
         {
-            return redirect('home');
+            return redirect('king');
         }else{
             return redirect()->route('login')
                 ->with('error','Email-Address And Password Are Wrong.');

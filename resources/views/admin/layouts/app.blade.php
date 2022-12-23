@@ -22,17 +22,17 @@
 
 <body>
 
-<a href="{{ route('logout') }}">Logout</a>
-<a href="{{ route('login') }}">Login</a>
+<a class="auth-link" href="{{ route('logout') }}">Logout</a>
+
 <div class="main-container">
     <div class="side-bar">
         <ul class="nav">
         <li class="nav-item nav-category"><h4>Dashboard</h4></li>     
-        <li class="nva-item"><a href="{{ route('users.index') }}">Users</a> </li>
-        <li class="nva-item"><a href="{{ route('king.index') }}">Kings</a> </li>
-        <li class="nva-item"><a href="{{ route('queen.index') }}">Queen</a> </li>
-        <li class="nva-item"><a href="{{ route('users.index') }}">All Kings</a> </li>
-        <li class="nva-item"><a href="{{ route('users.index') }}">All Queens</a> </li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}">Users</a> </li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('king.index') }}">Kings</a> </li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('queen.index') }}">Queen</a> </li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}">All Kings</a> </li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}">All Queens</a> </li>
         </ul>
     </div>
         
