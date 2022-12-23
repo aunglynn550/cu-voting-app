@@ -30,6 +30,21 @@ class UserSeeder extends Seeder
                 'username'=>'4CS-1',
                 'password' => Hash::make('12345678')
                 ]);
+                \App\Models\User::create([
+                    'name' => '4CS-2',
+                    'email' => 'thin@gmail.com',
+                    'is_admin'=>0,
+                    'username'=>'4CS-2',
+                    'password' => Hash::make('12345678')
+                    ]);
+
+                    \App\Models\User::create([
+                        'name' => '4CS-3',
+                        'email' => 'ei@gmail.com',
+                        'is_admin'=>0,
+                        'username'=>'4CS-3',
+                        'password' => Hash::make('12345678')
+                        ]);
 
     }
 }

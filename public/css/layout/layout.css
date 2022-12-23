@@ -164,6 +164,14 @@ picture
     align-self: end;
     box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
 }
+.grid .card__content{
+    background-color: #e7ecea;
+    align-self: end;
+    box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 15rem;
+}
 .card__title
 {
     font-size: 1.25rem;
@@ -383,7 +391,7 @@ picture
 
 
 
-@media (min-width:60em)
+@media (max-width:60em)
 {
     .card__img
     {
@@ -405,6 +413,9 @@ picture
     .card.featured .card__price
     {
         padding: 2rem;
+    }
+    .grid .card__content{
+        padding: 1rem 3.5rem;
     }
 }
 

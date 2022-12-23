@@ -24,6 +24,8 @@
         <div class="nav-items">
         <a href="{{ route('king') }}">King</a>
         <a href="{{ route('queen') }}">Queen</a> 
+        <a href="{{ route('allking') }}">all King</a> 
+        
         </div>
     </div>
     <button class="button-two">

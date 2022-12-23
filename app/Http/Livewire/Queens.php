@@ -28,7 +28,7 @@ class Queens extends Component
 
         
         $user = User::find(Auth::id());
-        $user->categories()->attach($queen_id);
+        $user->categories()->attach(2);
         $queens = Queen::all();
         return redirect('queen/voted',['queens'=>$queens]) ;
 

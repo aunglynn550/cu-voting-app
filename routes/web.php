@@ -63,14 +63,29 @@ Route::prefix('queen')->group(function () {
 Route::prefix('allking')->group(function () {
 
     Route::get('/', [\App\Http\Controllers\Allking\AllkingController::class, 'voteallking'])
-        ->name('allking');
+        ->name('allking')->middleware('all_king_voted');
+
 
         Route::get('/show', [\App\Http\Controllers\Allking\AllkingController::class, 'index'])
         ->name('allking.show');
 
-    Route::post('/voted', [\App\Http\Controllers\Allking\AllkingController::class, 'vote'])
+    Route::post('/vote', [\App\Http\Controllers\Allking\AllkingController::class, 'vote'])
         ->name('voteallking');
 });
+
+Route::prefix('allqueen')->group(function () {
+
+    Route::get('/', [\App\Http\Controllers\Allqueen\AllqueenController::class, 'voteallqueen'])
+        ->name('allqueen')->middleware('all_queen_voted');
+
+        Route::get('/show', [\App\Http\Controllers\Allqueen\AllqueenController::class, 'index'])
+        ->name('allqueen.show');
+
+    Route::post('/vote', [\App\Http\Controllers\Allqueen\AllqueenController::class, 'vote'])
+        ->name('voteallqueen');
+});
+
+
 
 });
 
