@@ -3,20 +3,29 @@
 }
 
 .button-two .line{
+    
     animation:to-open-icon 1s forwards;
 }
 
-.button-two:hover .line{
+/* .button-two:hover .line{
     animation:to-close-icon 1s forwards;
-}
+} */
 
 .button-two .line.top{
+    
    --rotation:-45deg;
    transform-origin: 65px 45px;
 }
+.button-two .line.top.open{
+    rotate: -45deg;
+}
 .button-two .line.bottom{
+   
    --rotation:45deg;
    transform-origin: 60px 55px;
+}
+.button-two .line.bottom.open{
+    rotate: 45deg;
 }
 
 @keyframes to-close-icon{

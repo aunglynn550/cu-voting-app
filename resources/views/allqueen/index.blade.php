@@ -16,7 +16,8 @@
           
           <div class="card__content">
             <h2 class="card__title">{{$allqueen->roll_number}}</h2>
-            <p>{{ $allqueen->vote }}</p>
+            <p class="all star"></p>
+            <p class="all count">{{ $allqueen->vote }}</p>
 
                
           </div>

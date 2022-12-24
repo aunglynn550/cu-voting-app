@@ -12,7 +12,7 @@ class QueenVotedController extends Controller
     //
     public function index()
     {
-        $queens = Queen::all();
+        $queens = Queen::orderBy('vote','desc')->get();
         return view('queen/voted',['queens'=>$queens]);
     }
 }

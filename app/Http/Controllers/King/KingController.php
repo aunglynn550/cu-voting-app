@@ -10,7 +10,7 @@ class KingController extends Controller
 {
     //
     public function index(){
-        $kings= King::all();
+        $kings= King::orderBy('vote','desc')->get();
         return view('king/index',['kings'=>$kings]);
     }
 }

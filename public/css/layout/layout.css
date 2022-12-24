@@ -132,7 +132,6 @@ picture
     max-width: 100rem;
     margin-inline: auto;
     padding-inline: 2rem;
-    padding-top: 3rem;
 }
 .stacked
 {
@@ -160,6 +159,7 @@ picture
 
 .product-grid .card__content
 {
+    position: relative;
     background-color: #e7ecea;
     align-self: end;
     box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
@@ -182,7 +182,10 @@ picture
 .product-grid .card
 {
     aspect-ratio: 1 / 1.5;
-    /* border: 3px solid hotpink; */
+}
+.product-grid .card.voted
+{
+    aspect-ratio: 1 / 1.4;
 }
 .product-grid .card__img
 {
@@ -305,6 +308,37 @@ picture
     width: 7em;
     height: 3em;
     font-size: 1em;
+}
+
+.count{
+    color: #3e3131;;
+    --padding-top:-13.2rem;
+    position: absolute;
+    background-color: rgb(132, 205, 137);
+    width: 2rem;
+    border-radius: 50%;
+    aspect-ratio: 1 /1;
+    top: var(--padding-top);
+    left: 11.5rem;
+    line-height: 33px;
+    font-family: 'Chivo Mono', monospace;
+}
+.star{ 
+    --padding-top:-15rem;
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    clip-path: polygon(50% 2.45%, 61.8% 38.77%, 100% 38.77%, 69.1% 61.23%, 80.9% 97.55%, 50% 75.1%, 19.1% 97.55%, 30.9% 61.23%, 0% 38.77%, 38.19% 38.77%);
+    background-color: #eb4747;
+    left: 10rem;
+    top: var(--padding-top);
+}
+.all.star{
+    --padding-top:-1rem;
+}
+
+.all.count{
+    --padding-top:.8rem;
 }
 
 /* Success Mark*/

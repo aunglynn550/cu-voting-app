@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/nav', function () {
+    return view('nav');
+});
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
