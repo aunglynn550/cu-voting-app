@@ -187,6 +187,16 @@ picture
 {
     aspect-ratio: 1 / 1.4;
 }
+.product-grid .card.voted .card__content::after{
+    content: '';
+    position: absolute;
+    width: 15rem;
+    aspect-ratio: 1 / 1;
+    background-color: #338f09ab;
+    top: -15rem;
+    clip-path: polygon(100% 0, 100% 27%, 91% 8%, 70% 27%, 50% 9%, 33% 29%, 13% 9%, 0 25%, 0 1%);
+    height: 4rem;
+}
 .product-grid .card__img
 {
     width: 100%;
@@ -319,9 +329,11 @@ picture
     border-radius: 50%;
     aspect-ratio: 1 /1;
     top: var(--padding-top);
-    left: 11.5rem;
+    left: .5rem;
     line-height: 33px;
     font-family: 'Chivo Mono', monospace;
+    
+    z-index: 2;
 }
 .star{ 
     --padding-top:-15rem;
@@ -330,8 +342,9 @@ picture
     height: 5rem;
     clip-path: polygon(50% 2.45%, 61.8% 38.77%, 100% 38.77%, 69.1% 61.23%, 80.9% 97.55%, 50% 75.1%, 19.1% 97.55%, 30.9% 61.23%, 0% 38.77%, 38.19% 38.77%);
     background-color: #eb4747;
-    left: 10rem;
+    left: -1rem;
     top: var(--padding-top);
+    z-index: 2;
 }
 .all.star{
     --padding-top:-1rem;
@@ -450,6 +463,17 @@ picture
     }
     .grid .card__content{
         padding: 1rem 3.5rem;
+    }
+    .grid .card__content::after{
+        content: '';
+        position: absolute;
+        width: 14.2rem;
+        aspect-ratio: 1 / 1;
+        background-color: #338f09ab;
+        top: 0rem;
+        clip-path: polygon(100% 0, 100% 27%, 91% 8%, 70% 27%, 50% 9%, 33% 29%, 13% 9%, 0 25%, 0 1%);
+        height: 4rem;
+        left: 1px;
     }
 }
 

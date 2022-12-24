@@ -1,5 +1,7 @@
 .button-two {
     --button-color:rgb(108, 103, 103);
+    position: relative;
+    z-index: 1;
 }
 
 .button-two .line{
