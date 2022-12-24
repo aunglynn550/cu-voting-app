@@ -32,6 +32,7 @@
 
 .nav div.logo{
     position: absolute;
+    display: none;
 }
 
 .nav div.logo a{
@@ -48,7 +49,7 @@
 .nav div.main_list{
     width: 600px;
     height: 65px;
-    float: right;
+   
 }
 
 .nav div.main_list ul{
@@ -65,9 +66,11 @@
 
 .nav div.main_list ul li a{
     text-decoration: none;
-    color: #fff;
+    color: #090909;
     line-height: 65px;
     text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .nav div.main_list ul li a:hover{
@@ -173,6 +176,7 @@
     
     .nav div.logo{
         margin-left: 157px;
+        display: block;
     }
     
     .nav div.main_list{
@@ -204,13 +208,21 @@
     }
     
     .nav div.main_list ul li a{
+        color: #fff;
       text-align: center;
         line-height: 40px;
         width: 100%;
         height: 40px;
         display: table;
     }
+    .nav div.main_list{
+        float: right;
+    }
     
+    .product-grid .card__content
+    {
+        width: 100%;
+    }
     .nav div.media_button{
         display: block;
     }

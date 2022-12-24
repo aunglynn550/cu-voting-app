@@ -163,6 +163,7 @@ picture
     background-color: #e7ecea;
     align-self: end;
     box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+    width: 21.5rem;
 }
 .grid .card__content{
     background-color: #e7ecea;
@@ -190,16 +191,16 @@ picture
 .product-grid .card.voted .card__content::after{
     content: '';
     position: absolute;
-    width: 15rem;
+    width: 21.7rem;
     aspect-ratio: 1 / 1;
     background-color: #338f09ab;
-    top: -15rem;
+    top:  -21.7rem;
     clip-path: polygon(100% 0, 100% 27%, 91% 8%, 70% 27%, 50% 9%, 33% 29%, 13% 9%, 0 25%, 0 1%);
     height: 4rem;
 }
 .product-grid .card__img
 {
-    width: 100%;
+    width: 80%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
@@ -322,7 +323,7 @@ picture
 
 .count{
     color: #3e3131;;
-    --padding-top:-13.2rem;
+    --padding-top:-20.2rem;
     position: absolute;
     background-color: rgb(132, 205, 137);
     width: 2rem;
@@ -336,7 +337,7 @@ picture
     z-index: 2;
 }
 .star{ 
-    --padding-top:-15rem;
+    --padding-top:-22rem;
     position: absolute;
     width: 5rem;
     height: 5rem;
@@ -440,6 +441,22 @@ picture
 
 @media (max-width:60em)
 {
+    .count
+    {
+        --padding-top:-13.2rem;
+    }
+    .star
+    {
+        --padding-top:-15rem;
+    }
+    .product-grid .card__img{
+        width: 100%;
+    }
+    .product-grid .card.voted .card__content::after{
+        top: -15rem;
+        width: 15rem;
+
+    }
     .card__img
     {
         aspect-ratio: 1 / 1;
@@ -451,6 +468,7 @@ picture
     }
     .card.featured .card__img
     {
+        width: 100%;
         aspect-ratio: 1 / 1.25;
     }
     .card.featured .card__title
@@ -463,6 +481,10 @@ picture
     }
     .grid .card__content{
         padding: 1rem 3.5rem;
+
+    }
+    .product-grid .card__content{
+        width: 100%;
     }
     .grid .card__content::after{
         content: '';
