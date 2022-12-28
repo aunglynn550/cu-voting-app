@@ -18,7 +18,6 @@
 
     <link rel="stylesheet" href="/css/layout/layout.css">
     <link rel="stylesheet" href="/css/layout/buttons.css">
-    <link rel="stylesheet" href="/css/layout/respnav.css">
     <script type="text/javascript" src="/js/app.js"></script>
     
     @livewireStyles
@@ -28,49 +27,24 @@
 <a href="{{ route('login') }}">Login</a>
 <a href="{{ route('register') }}">Register</a> -->
 
-<nav class="nav">
-    <div class="container">
-        <div class="logo">
-            
-            <button onclick="myfun()" class="button-two">
-        <svg stroke=var(--button-color) class="hamburger" viewBox="0 0 100 100" width="40" height="40">
-            <line id="line-top" class="line top"
-            x1="90" x2="10" y1="40" y2="40"
-            stroke-width="10"
-            stroke-linecap="round"
-            stroke-dasharray="80"
-            stroke-dashoffset="0">
-            </line>
-            <line id="line-bottom" class="line bottom"
-            x1="10" x2="90" y1="60" y2="60"
-            stroke-width="10"
-            stroke-linecap="round"
-            stroke-dasharray="80"
-            stroke-dashoffset="0">
-            </line>
-        
-        </svg>
-    </button>
 
-        </div>
-        <div class="main_list" id="mainListDiv">
-            <ul>
-                <li> <a class="ff-tanger" href="{{ route('king') }}">King</a></li>
+<header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo">LR</a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+            <li> <a class="ff-tanger" href="{{ route('king') }}">King</a></li>
                 <li><a class="ff-tanger" href="{{ route('queen') }}">Queen</a> </li>
                 <li><a class="ff-tanger" href="{{ route('allking') }}">all King</a> </li>
                 <li><a class="ff-tanger" href="{{ route('allqueen') }}">all Queen</a> </li>
-              
             </ul>
-        </div>
-        <div class="media_button">
-            <button class="main_media_button" id="mediaButton">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</nav>
+        </nav>
+    </header>
+   
 
 
     <!-- <div class="nav">

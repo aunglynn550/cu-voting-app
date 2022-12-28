@@ -34,5 +34,45 @@ class KingSeeder extends Seeder
             'created_at'=>now(),
             'updated_at'=>now(),
         ]);
+        King::create([
+            'name' => 'DatTha',
+            'image'=>'dat-dat.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]);
+         King::create([
+            'name' => 'kostar',
+            'image'=>'sat-naykha.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]); King::create([
+            'name' => 'ko khant',
+            'image'=>'kokhant.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]);
+        King::create([
+            'name' => 'DatTha',
+            'image'=>'dat-dat.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]);
+         King::create([
+            'name' => 'kostar',
+            'image'=>'sat-naykha.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]); King::create([
+            'name' => 'ko khant',
+            'image'=>'kokhant.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]);
     }
 }

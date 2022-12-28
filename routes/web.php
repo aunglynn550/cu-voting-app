@@ -32,6 +32,8 @@ Route::group( [ 'middleware' =>'auth'], function()
 
      
         Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->middleware('is_admin');       
+        Route::get('/allkinglist', [App\Http\Controllers\Admin\AllKingController::class, 'index'])->name('allkinglist')->middleware('is_admin');       
+        Route::get('/allqueenlist', [App\Http\Controllers\Admin\AllQueenController::class, 'index'])->name('allqueenlist')->middleware('is_admin');       
     });
 
 

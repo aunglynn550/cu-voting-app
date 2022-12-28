@@ -31,8 +31,8 @@
         <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}">Users</a> </li>
         <li class="nav-item"><a class="nav-link" href="{{ route('king.index') }}">Kings</a> </li>
         <li class="nav-item"><a class="nav-link" href="{{ route('queen.index') }}">Queen</a> </li>
-        <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}">All Kings</a> </li>
-        <li class="nav-item"><a class="nav-link" href="{{ route('users.index') }}">All Queens</a> </li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('allkinglist') }}">All Kings</a> </li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('allqueenlist') }}">All Queens</a> </li>
         </ul>
     </div>
         

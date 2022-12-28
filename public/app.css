@@ -19,6 +19,8 @@
   --size-300:1.5rem;
 
   --body-padding:1rem;
+  --box-shadow-primary : 0 1em 1em -1em rgb(29, 58, 166);
+  --box-shadow-secondary : 0 1em 1em -1em red;
 }
 
 
@@ -65,7 +67,7 @@ th,td{
 
 .main-container{
   display: flex;
-  justify-content: space-between;
+  gap: 10rem;
   height: 100%;
   padding: 3rem;
 }
@@ -204,3 +206,31 @@ th,td{
   font-weight: 800;
 }
 
+/* Admin Panel */
+
+.ff-tanger{
+  font-family: 'Tangerine', serif;
+}
+
+.admin.container{
+  max-width: 30rem;
+  background-color: #33998b;
+  padding: 5rem 1rem;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow-primary);
+}
+
+.input_group{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input_group .btn{
+  background: #421372;
+  max-width: 6.5rem;
+  height: 3rem;
+  padding: 8px 14px;
+  color: white;
+  box-shadow: var(--box-shadow-secondary);
+}

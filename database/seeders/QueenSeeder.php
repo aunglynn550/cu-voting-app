@@ -36,5 +36,49 @@ class QueenSeeder extends Seeder
             'created_at'=>now(),
             'updated_at'=>now(),
         ]);
+        Queen::create([
+            'name' => 'leonor',
+            'image'=>'leonor1.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]);
+
+        Queen::create([
+            'name' => 'leonor',
+            'image'=>'leonor2.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]);
+        Queen::create([
+            'name' => 'Leonor',
+            'image'=>'leonor3.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]);
+        Queen::create([
+            'name' => 'leonor',
+            'image'=>'leonor1.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]);
+
+        Queen::create([
+            'name' => 'leonor',
+            'image'=>'leonor2.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]);
+        Queen::create([
+            'name' => 'Leonor',
+            'image'=>'leonor3.jpg',
+            'vote'=>0,
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]);
     }
 }

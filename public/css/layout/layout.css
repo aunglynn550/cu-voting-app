@@ -1,7 +1,7 @@
 :root {
     --ff-primary: Heebo, sans-serif;
     --ff-secondary: Bungee, cursive;
-    --ff-neutral:'Tangerine', serif;;
+    --ff-neutral:'Tangerine', serif;
     --ff-accent: Bungee Shade, cursive;
     --spacer: 1rem;
     --clr-neutral-100: 0 0% 100%;
@@ -49,6 +49,8 @@
     --fs-700: 2.25rem;
     --fs-800: 2.75rem;
     --fs-900: 3.25rem;
+
+    --box-shadow :box-shadow: 0 1em 1em -1em red;
   }
 
   h1,
@@ -106,31 +108,14 @@ picture
   object-fit: cover;
 }
 
-.nav{
-    position: fixed;
-    left: 20%;
-    z-index: 1;
-}
 
-.nav-items{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
 
-.nav-items a{
-    text-decoration: none;
-    font-size: 1.5rem;
-    background-color: #f1f3ef;
-    border-radius: 4px;
-    padding: 5px 20px;
-}
 
 .container
 {
+    margin-top: 3rem;
     max-width: 100rem;
-    margin-inline: auto;
+    /* margin-inline: auto; */
     padding-inline: 2rem;
 }
 .stacked
@@ -145,7 +130,7 @@ picture
 .product-grid
 {
     display: grid;
-    gap: .5rem;
+    gap: .3rem;
     grid-template-columns: 
     repeat(auto-fit, minmax(15rem, 1fr));
     height: 100%;
@@ -163,7 +148,7 @@ picture
     background-color: #e7ecea;
     align-self: end;
     box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
-    width: 21.5rem;
+    width: 85%;
 }
 .grid .card__content{
     background-color: #e7ecea;
@@ -200,7 +185,7 @@ picture
 }
 .product-grid .card__img
 {
-    width: 80%;
+    width: 83%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
@@ -211,6 +196,7 @@ picture
     align-items: center;
     justify-content: center;
 }
+
 
 /* Cart Grid */
 
@@ -450,7 +436,7 @@ picture
         --padding-top:-15rem;
     }
     .product-grid .card__img{
-        width: 100%;
+        width: 85%;
     }
     .product-grid .card.voted .card__content::after{
         top: -15rem;
@@ -500,9 +486,7 @@ picture
 }
 
 
-header{
-    padding: 50px;
-}
+
 
 
 footer{

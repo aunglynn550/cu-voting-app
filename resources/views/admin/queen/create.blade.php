@@ -2,9 +2,10 @@
 
 @section('content')
 
-
-<div class="container">
-        <div class="row justify-content-center">
+<div class="main-content">
+<div class="admin container">
+    <h3 class="ff-tanger">Create New Queen</h3>
+        <div class="row">
             <div class="col-md-12">
 
             <form action="{{ route('queen.store') }}" method="post" enctype="multipart/form-data">
@@ -15,12 +16,13 @@
                 </div>
 
             
-                <div class="input-group">
-                <input type="file" name="image">
+                <div class="input_group">
+                    <input class="btn" type="file" name="image">
+                    <input type="submit" class="btn"  value="Create">
                 </div>
-                <div class="btn">
-                    <input type="submit" class="button" data-type="primary" value="Create">
-                </div>
+ 
+                
+
 
             </form>
                   
@@ -28,5 +30,8 @@
                 </div>
             </div>
         </div>
+
+</div>
+
 
 @endsection
