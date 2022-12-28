@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Kings</h1>
+    <h1 class="ff-tanger">Kings</h1>
     <div class="product-grid">
     
 

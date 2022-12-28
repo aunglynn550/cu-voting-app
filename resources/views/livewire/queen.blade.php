@@ -1,6 +1,6 @@
 
 <div class="container">
-<h1>Queens</h1>
+<h1 class="ff-tanger">Queens</h1>
 <div class="product-grid">
 
 
