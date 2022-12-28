@@ -65,6 +65,14 @@
     font-family: 'Tangerine', serif;
 }
 
+.ff-bunge{
+    font-family: var(--ff-accent);
+}
+
+.fs-1{
+    font-size: 20px;
+    color: white;
+}
 /* button */
 
 .button{
