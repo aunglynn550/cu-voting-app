@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="/css/layout/layout.css">
     <link rel="stylesheet" href="/css/layout/buttons.css">
-    <script type="text/javascript" src="/js/app.js"></script>
+    
     
     @livewireStyles
 </head>
