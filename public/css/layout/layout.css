@@ -173,16 +173,7 @@ picture
 {
     aspect-ratio: 1 / 1.4;
 }
-.product-grid .card.voted .card__content::after{
-    content: '';
-    position: absolute;
-    width: 21.7rem;
-    aspect-ratio: 1 / 1;
-    background-color: #338f09ab;
-    top:  -21.7rem;
-    clip-path: polygon(100% 0, 100% 27%, 91% 8%, 70% 27%, 50% 9%, 33% 29%, 13% 9%, 0 25%, 0 1%);
-    height: 4rem;
-}
+
 .product-grid .card__img
 {
     width: 83%;
@@ -309,7 +300,7 @@ picture
 
 .count{
     color: #3e3131;;
-    --padding-top:-20.2rem;
+    --padding-top:-12.2rem;
     position: absolute;
     background-color: rgb(132, 205, 137);
     width: 2rem;
@@ -323,7 +314,7 @@ picture
     z-index: 2;
 }
 .star{ 
-    --padding-top:-22rem;
+    --padding-top:-14rem;
     position: absolute;
     width: 5rem;
     height: 5rem;
@@ -439,8 +430,8 @@ picture
         width: 85%;
     }
     .product-grid .card.voted .card__content::after{
-        top: -15rem;
-        width: 15rem;
+        top: -205px;
+        width: 12.7rem;
 
     }
     .card__img
