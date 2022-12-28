@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="container">
-    <h1 class="ff-tanger">All Kings List</h1>
+    <h1 class="ff-tanger">The Whole Kings List</h1>
 <div class="grid">
     
 
