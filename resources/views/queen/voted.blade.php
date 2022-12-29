@@ -15,7 +15,9 @@
           <img src="/img/Queen/{{ $queen->image }}" alt="" class="card__img">
           <div class="card__content">
             <h2 class="card__title">{{$queen->name}} </h2>
-            <p class="star"></p>
+            <span class="fa fa-star upper star-position"></span>
+            <span class="fa fa-star md star-position"></span>
+            <span class="fa fa-star low star-position"></span>
             <p class="count">{{ $queen->vote }}</p>
               
           </div>

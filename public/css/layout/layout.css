@@ -50,6 +50,8 @@
     --fs-800: 2.75rem;
     --fs-900: 3.25rem;
 
+    --rotate:rotate(20deg);
+
     --box-shadow :box-shadow: 0 1em 1em -1em red;
   }
 
@@ -72,6 +74,24 @@
 .fs-1{
     font-size: 20px;
     color: white;
+}
+/* Star */
+.star-position{
+    position: absolute;
+    top: -14.3rem;
+    left: -5px;
+    font-size: 4rem;
+    transform: var(--rotate);
+}
+
+.fa-star.upper{
+    --rotate:rotate(0deg);
+}
+.fa-star.md{
+   --rotate:rotate(20deg);
+}
+.fa-star.low{
+--rotate:rotate(40deg);
 }
 /* button */
 
@@ -142,6 +162,7 @@ picture
     grid-template-columns: 
     repeat(auto-fit, minmax(15rem, 1fr));
     height: 100%;
+    padding: 2rem 0;
 }
 
 .product-grid .card__content >*
@@ -310,7 +331,7 @@ picture
     color: #3e3131;;
     --padding-top:-12.2rem;
     position: absolute;
-    background-color: rgb(132, 205, 137);
+    background-color: rgb(191, 215, 193);
     width: 2rem;
     border-radius: 50%;
     aspect-ratio: 1 /1;
